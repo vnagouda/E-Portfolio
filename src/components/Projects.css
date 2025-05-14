@@ -1,0 +1,139 @@
+.projects-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #F9B17A;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.project-card-grid {
+  padding: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 60px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  overflow: visible;
+}
+
+.project-card-grid:hover {
+  box-shadow: 0 0 50px rgba(249, 177, 122, 0.4), 0 0 80px rgba(249, 177, 122, 0.2);
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #F9B17A;
+  margin-bottom: 0.75rem;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: linear-gradient(145deg, #f9b17a33, #f9b17a11);
+  color: #F9B17A;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #f9b17a44;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.tag:hover {
+  transform: scale(1.1);
+  background-color: #f9b17a22;
+}
+
+.cards-container-3d {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.project-card-3d {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  width: 300px;
+  max-width: 90vw;
+  color: white;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.project-card-3d.hovered {
+  z-index: 5;
+  transform: scale(1.06) rotateX(-6deg) rotateY(6deg);
+  box-shadow: 0 0 40px rgba(249, 177, 122, 0.5), 0 0 60px rgba(249, 177, 122, 0.2);
+}
+
+.project-card-3d.dimmed {
+  opacity: 0.5;
+  transform: scale(0.94) rotateX(3deg);
+  z-index: 0;
+}
+
+.project-glow-border {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  z-index: -1;
+  background: radial-gradient(circle, #f9b17a33, #f9b17a00);
+  box-shadow: 0 0 40px #f9b17a44;
+  opacity: 0;
+  transition: 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card-3d.hovered .project-glow-border {
+  opacity: 1;
+  transform: scale(1.1);
+}
