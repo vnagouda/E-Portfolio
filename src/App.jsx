@@ -1,8 +1,6 @@
 import './index.css';
 import ParticleBackground from './components/ParticleBackground';
 import React, { useEffect, useRef } from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
@@ -10,6 +8,7 @@ import SWOT from './components/SWOT';
 import POAttainment from './components/POAttainment';
 import Contact from './components/Contact';
 import DotNavigation from './components/DotNavigation';
+import HeroAbout from './components/HeroAbout';
 
 function App() {
   const scrollRef = useRef(null);
@@ -34,8 +33,7 @@ function App() {
         className="relative z-10 h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide"
       >
         {/* Each section can be min-h-screen (auto-growing) but works with snap */}
-        <div className="snap-start" id="hero"><Hero /></div>
-        <div className="snap-start" id="about"><About /></div>
+        <div className="snap-start" id="hero"><HeroAbout /></div>
         <div className="snap-start" id="skills"><Skills /></div>
         <div className="snap-start" id="projects"><Projects /></div>
         <div className="snap-start" id="experience"><Experience /></div>

@@ -53,7 +53,7 @@ const Contact = () => {
       <div className="relative max-w-md mx-auto text-center">
         {/* Section title */}
         <motion.h2
-          className="text-4xl font-bold mb-6 border-b-2 border-pink-600 inline-block"
+          className="text-4xl font-bold mb-6 border-b-2 border-[#F9B17A] inline-block"
           variants={itemVariants}
         >
           Contact
@@ -78,7 +78,7 @@ const Contact = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-pink-500 to-pink-700 rounded-2xl shadow-xl transform-gpu hover:-translate-y-1 hover:shadow-pink-600/50 transition-all duration-300"
+              className="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-[#F9B17A] to-[#fba96c] rounded-2xl shadow-xl transform-gpu hover:-translate-y-1 hover:shadow-[#F9B17A]/50 transition-all duration-300"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

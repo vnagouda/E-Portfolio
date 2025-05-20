@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'swot', 'poattainment', 'contact'];
+const sections = ['hero', 'skills', 'projects', 'experience', 'swot', 'poattainment', 'contact'];
 
 export default function DotNavigation({ containerRef }) {
   const [active, setActive] = useState('hero');

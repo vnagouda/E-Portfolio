@@ -61,7 +61,7 @@ const SWOT = () => {
       <div className="absolute inset-0 pointer-events-none"></div>
 
       <div className="relative max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8 border-b-2 border-pink-600 inline-block">
+        <h2 className="text-4xl font-bold mb-8 border-b-2 border-[#F9B17A] inline-block">
           SWOT Analysis
         </h2>
 
@@ -69,12 +69,12 @@ const SWOT = () => {
           {Object.entries(swotData).map(([category, items], idx) => (
             <motion.div
               key={category}
-              className="p-6 rounded-xl shadow-xl bg-gradient-to-br from-[#112240] to-[#1e2a3a] border border-pink-500 hover:shadow-pink-500/50"
+              className="p-6 rounded-xl shadow-xl bg-gradient-to-br from-[#112240] to-[#1e2a3a] border border-[#F9B17A] hover:shadow-[#F9B17A]/50"
               variants={cardVariants}
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.98 }}
             >
-              <h3 className="text-2xl font-semibold text-pink-300 mb-4">
+              <h3 className="text-2xl font-semibold text-[#F9B17A] mb-4">
                 {category}
               </h3>
               <motion.ul className="list-disc list-inside space-y-2" variants={containerVariants}>

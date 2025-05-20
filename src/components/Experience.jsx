@@ -32,9 +32,9 @@ const itemVariants = {
 
 const Experience = () => {
   return (
-    <section id="experience" className="min-h-screen p-8 text-white">
+    <section id="experience" className="min-h-screen p-8 text-[#F9B17A]">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 border-b-2 border-pink-600 inline-block">
+        <h2 className="text-4xl font-bold mb-12 border-b-2 border-[#F9B17A] inline-block">
           Experience
         </h2>
 
@@ -46,7 +46,7 @@ const Experience = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* Vertical timeline line */}
-          <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-pink-600"></div>
+          <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-[#F9B17A]"></div>
 
           {experiences.map((exp, idx) => (
             <motion.div
@@ -56,10 +56,10 @@ const Experience = () => {
               whileHover={{ rotateY: 5 }}
             >
               <div className="absolute -left-4 top-1">
-                <div className="w-4 h-4 bg-pink-600 rounded-full animate-pulse"></div>
+                <div className="w-4 h-4 bg-[#F9B17A] rounded-full animate-pulse"></div>
               </div>
 
-              <h3 className="text-2xl font-semibold text-pink-400">{exp.title}</h3>
+              <h3 className="text-2xl font-semibold text-[#F9B17A]">{exp.title}</h3>
               <p className="mt-1 text-gray-300 italic">{exp.duration}</p>
 
               <ul className="mt-3 list-disc list-inside space-y-2 text-base text-gray-200">
