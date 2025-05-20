@@ -6,7 +6,7 @@ import SectionWrapper from './SectionWrapper';
 const imageMap = import.meta.glob('../assets/About/*.jpg', { eager: true });
 const images = Object.values(imageMap).map((mod) => mod.default);
 
-const IMAGE_DURATION = 7; // seconds per image
+const IMAGE_DURATION = 4; // seconds per image
 
 const LeftContent = () => {
   const [index, setIndex] = useState(0);

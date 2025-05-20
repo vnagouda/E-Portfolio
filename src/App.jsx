@@ -5,6 +5,10 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Experience from './components/Experience';
+import SWOT from './components/SWOT';
+import POAttainment from './components/POAttainment';
+import Contact from './components/Contact';
 import DotNavigation from './components/DotNavigation';
 
 function App() {
@@ -15,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-screen min-h-screen bg-[#1a1a1a] overflow-x-hidden text-white">
+    <div className="relative w-full min-h-screen bg-[#1a1a1a] overflow-x-hidden text-white">
       {/* Particle Layer */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <ParticleBackground scrollContainerRef={scrollRef} />
@@ -24,18 +28,22 @@ function App() {
       {/* Dot Navigation */}
       <DotNavigation containerRef={scrollRef} />
 
-      {/* Foreground Scrollable Content */}
+      {/* Scrollable snap container with fixed height */}
       <div
         ref={scrollRef}
         className="relative z-10 h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide"
       >
+        {/* Each section can be min-h-screen (auto-growing) but works with snap */}
         <div className="snap-start" id="hero"><Hero /></div>
         <div className="snap-start" id="about"><About /></div>
         <div className="snap-start" id="skills"><Skills /></div>
         <div className="snap-start" id="projects"><Projects /></div>
+        <div className="snap-start" id="experience"><Experience /></div>
+        <div className="snap-start" id="swot"><SWOT /></div>
+        <div className="snap-start" id="poattainment"><POAttainment /></div>
+        <div className="snap-start" id="contact"><Contact /></div>
       </div>
     </div>
   );
 }
-
 export default App;
