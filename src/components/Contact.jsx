@@ -48,7 +48,7 @@ const Contact = () => {
       animate="show"
     >
       {/* Decorative gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-pink-900 via-transparent to-indigo-900 opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none" />
 
       <div className="relative max-w-md mx-auto text-center">
         {/* Section title */}
