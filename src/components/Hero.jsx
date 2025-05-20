@@ -12,8 +12,7 @@ const GlowText = ({
   <span
     className={`relative z-10 ${size} ${weight} ${color} ${className}`}
     style={{
-      textShadow:
-        '0 0 6px rgba(255, 222, 173, 0.2), 0 0 20px rgba(255, 222, 173, 0.08)',
+      textShadow: '0 0 6px rgba(255, 222, 173, 0.2), 0 0 20px rgba(255, 222, 173, 0.08)',
       whiteSpace: 'normal'
     }}
   >
@@ -23,13 +22,12 @@ const GlowText = ({
 
 /* ---------------- Left Content ---------------- */
 const LeftContent = () => (
-  <div className="w-full max-w-2xl pointer-events-auto flex flex-col justify-center min-h-[70vh] px-4 sm:px-0">
-    {/* Heading */}
+  <div className="w-full max-w-md sm:max-w-2xl pointer-events-auto flex flex-col justify-center px-4 sm:px-0">
     <motion.h1
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="text-[clamp(2.5rem,7vw,5rem)] font-extrabold leading-tight tracking-tight"
+      className="text-[clamp(2.2rem,6vw,4.5rem)] font-extrabold leading-tight tracking-tight"
     >
       <span className="whitespace-nowrap">
         <GlowText text="Hi, I'm" size="inherit" weight="inherit" />{' '}
@@ -37,53 +35,49 @@ const LeftContent = () => (
       </span>
     </motion.h1>
 
-    {/* Tagline */}
     <motion.p
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.8 }}
       className="mt-4"
     >
-      <GlowText text="I build AI, IoT, and Cloud–powered systems that scale." size="text-lg sm:text-2xl" weight="font-medium" />
+      <GlowText text="I build AI, IoT, and Cloud–powered systems that scale." size="text-base sm:text-xl" weight="font-medium" />
     </motion.p>
 
-    {/* Subtitle */}
     <motion.p
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.8 }}
       className="mt-2 space-y-1"
     >
-      <GlowText text="Computer Engineer • Cloud‑Native Dev • AI Researcher" size="text-base sm:text-lg" />
+      <GlowText text="Computer Engineer • Cloud‑Native Dev • AI Researcher" size="text-sm sm:text-base" />
       <br />
-      <GlowText text="FYP: Aquaculture Intelligence" size="text-base sm:text-lg" />
+      <GlowText text="FYP: Aquaculture Intelligence" size="text-sm sm:text-base" />
     </motion.p>
 
-    {/* CTA Buttons */}
     <motion.div
-      className="mt-6 flex flex-col sm:flex-row gap-4"
+      className="mt-6 flex flex-col sm:flex-row gap-3 text-sm sm:text-base"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.6, duration: 0.8 }}
     >
       <a
         href="#projects"
-        className="px-6 py-3 rounded-xl font-semibold bg-[#F9B17A] text-[#1a1a1a] shadow-lg hover:bg-[#fba96c] transition-all"
+        className="px-5 py-2 sm:px-6 sm:py-3 rounded-xl font-semibold bg-[#F9B17A] text-[#1a1a1a] shadow-lg hover:bg-[#fba96c] transition-all"
       >
         View Projects
       </a>
       <a
         href="/Viresh_Resume.pdf"
         download
-        className="px-6 py-3 border border-[#F4EDE4] text-[#F4EDE4] rounded-xl font-semibold hover:bg-[#F4EDE4] hover:text-black transition-all"
+        className="px-5 py-2 sm:px-6 sm:py-3 border border-[#F4EDE4] text-[#F4EDE4] rounded-xl font-semibold hover:bg-[#F4EDE4] hover:text-black transition-all"
       >
         Download Resume
       </a>
     </motion.div>
 
-    {/* Social Icons */}
     <motion.div
-      className="mt-6 flex gap-6 text-2xl sm:text-3xl text-[#F4EDE4]"
+      className="mt-4 flex gap-5 text-xl sm:text-2xl text-[#F4EDE4]"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8, duration: 0.8 }}
@@ -114,15 +108,15 @@ const LeftContent = () => (
 /* ---------------- Right Content ---------------- */
 const RightContent = () => (
   <motion.div
-    initial={{ opacity: 0, x: 50 }}
-    animate={{ opacity: 1, x: 0 }}
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}
-    className="flex justify-center md:justify-end mt-10 md:mt-0"
+    className="w-full flex justify-center md:justify-end mt-10 md:mt-0"
   >
     <img
       src={avatar}
       alt="Viresh Avatar"
-      className="w-40 sm:w-60 md:w-72 lg:w-[320px] h-auto drop-shadow-xl rounded-xl"
+      className="w-32 sm:w-48 md:w-72 lg:w-[320px] h-auto drop-shadow-xl rounded-xl"
     />
   </motion.div>
 );
