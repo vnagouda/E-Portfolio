@@ -1,47 +1,45 @@
-import './index.css';
-import ParticleBackground from './components/ParticleBackground';
-import React, { useEffect, useRef } from 'react';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import SWOT from './components/SWOT';
-import POAttainment from './components/POAttainment';
-import Contact from './components/Contact';
-import DotNavigation from './components/DotNavigation';
-import HeroAbout from './components/HeroAbout';
+import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import BootSequence from './components/BootSequence'
+import ConsoleNav from './components/ConsoleNav'
+import GlobalBackground from './components/GlobalBackground'
+import ScrollToTop from './components/ScrollToTop'
+import Lab from './views/Lab'
+import Systems from './views/Systems'
+import SystemDetail from './views/SystemDetail'
+import Experiments from './views/Experiments'
+import Logs from './views/Logs'
+import Contact from './views/Contact'
+import './App.css'
 
 function App() {
-  const scrollRef = useRef(null);
+    const [bootComplete, setBootComplete] = useState(false)
 
-  useEffect(() => {
-    scrollRef.current?.scrollTo(0, 0);
-  }, []);
+    const handleBootComplete = () => {
+        setBootComplete(true)
+    }
 
-  return (
-    <div className="relative w-full min-h-screen bg-[#1a1a1a] overflow-x-hidden text-white">
-      {/* Particle Layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <ParticleBackground scrollContainerRef={scrollRef} />
-      </div>
+    if (!bootComplete) {
+        return <BootSequence onComplete={handleBootComplete} />
+    }
 
-      {/* Dot Navigation */}
-      <DotNavigation containerRef={scrollRef} />
-
-      {/* Scrollable snap container with fixed height */}
-      <div
-        ref={scrollRef}
-        className="relative z-10 h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide"
-      >
-        {/* Each section can be min-h-screen (auto-growing) but works with snap */}
-        <div className="snap-start" id="hero"><HeroAbout /></div>
-        <div className="snap-start" id="skills"><Skills /></div>
-        <div className="snap-start" id="projects"><Projects /></div>
-        <div className="snap-start" id="experience"><Experience /></div>
-        <div className="snap-start" id="swot"><SWOT /></div>
-        <div className="snap-start" id="poattainment"><POAttainment /></div>
-        <div className="snap-start" id="contact"><Contact /></div>
-      </div>
-    </div>
-  );
+    return (
+        <div className="app">
+            <ScrollToTop />
+            <GlobalBackground />
+            <ConsoleNav />
+            <main className="main-content">
+                <Routes>
+                    <Route path="/" element={<Lab />} />
+                    <Route path="/systems" element={<Systems />} />
+                    <Route path="/systems/:id" element={<SystemDetail />} />
+                    <Route path="/experiments" element={<Experiments />} />
+                    <Route path="/logs" element={<Logs />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </main>
+        </div>
+    )
 }
-export default App;
+
+export default App

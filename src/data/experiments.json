@@ -1,0 +1,207 @@
+[
+    {
+        "id": "fish-restart",
+        "title": "Fish Detection Restart",
+        "category": "AGRI-AI",
+        "status": "RESEARCH",
+        "desc": "Ground-up retraining initiative using background subtraction & motion detection for difficult underwater conditions.",
+        "tech": [
+            "Python",
+            "OpenCV",
+            "BackgroundSub"
+        ]
+    },
+    {
+        "id": "pond-setup",
+        "title": "DIY Freshwater Pond Setup",
+        "category": "AGRI-AI",
+        "status": "PHYSICAL",
+        "desc": "Physical experimental setup for observing fish behavior and testing non-invasive monitoring strategies.",
+        "tech": [
+            "Hardware",
+            "Ecology"
+        ]
+    },
+    {
+        "id": "vault-mvp",
+        "title": "Vault MVP (Security Playground)",
+        "category": "SECURITY",
+        "status": "PROTOTYPE",
+        "desc": "The initial proving ground for ByteSeal's biometric and encryption logic. Feature testbed for rapid iteration.",
+        "tech": [
+            "Kotlin",
+            "Biometrics",
+            "AES"
+        ]
+    },
+    {
+        "id": "android-vault-adv",
+        "title": "Android Vault MVP (Advanced)",
+        "category": "SECURITY",
+        "status": "EVOLVING",
+        "desc": "Advanced iteration of the Vault with Google Drive BYOS planning and production-grade architecture.",
+        "tech": [
+            "Jetpack Compose",
+            "Google Drive API"
+        ]
+    },
+    {
+        "id": "whatsapp-auto",
+        "title": "WhatsApp Auto Framework",
+        "category": "AUTOMATION",
+        "status": "INTEGRATED",
+        "desc": "Meta Business Cloud API integration for agent-driven workflows and media handling.",
+        "tech": [
+            "Meta API",
+            "Webhooks"
+        ]
+    },
+    {
+        "id": "yolo-seg",
+        "title": "YOLOv8 Segmentation",
+        "category": "CV",
+        "status": "COMPLETED",
+        "desc": "Custom segmentation dataset creation and transfer learning on RTX 4060 GPU.",
+        "tech": [
+            "YOLOv8-Seg",
+            "PyTorch"
+        ]
+    },
+    {
+        "id": "captcha-solver",
+        "title": "CAPTCHA Solver R&D",
+        "category": "CV",
+        "status": "RESEARCH",
+        "desc": "Fine-tuning TrOCR and PaddleOCR for breaking complex captchas. Failure mode analysis.",
+        "tech": [
+            "TrOCR",
+            "PaddleOCR"
+        ]
+    },
+    {
+        "id": "waste-analytics",
+        "title": "Waste Mgmt Analytics",
+        "category": "DATA SCIENCE",
+        "status": "COMPLETED",
+        "desc": "Multivariate regression analysis on government datasets to predict recycling rates using CRISP-DM.",
+        "tech": [
+            "Python",
+            "Pandas",
+            "Scikit-Learn"
+        ]
+    },
+    {
+        "id": "big-data-assign",
+        "title": "Big Data Analytics",
+        "category": "DATA SCIENCE",
+        "status": "ACADEMIC",
+        "desc": "Predictive modeling, clustering, and cumulative dataset analysis for complex scenarios.",
+        "tech": [
+            "Big Data",
+            "Clustering"
+        ]
+    },
+    {
+        "id": "gis-maps",
+        "title": "Road Dev / DP Map Analysis",
+        "category": "GIS",
+        "status": "ACTIVE",
+        "desc": "Extracting survey numbers from 1966-2018 DP maps using OCR and manual verification trade-offs.",
+        "tech": [
+            "OCR",
+            "GIS",
+            "Excel"
+        ]
+    },
+    {
+        "id": "gdp-web",
+        "title": "GDP Website Group Project",
+        "category": "WEB",
+        "status": "LEGACY",
+        "desc": "PHP-based farm management system with role-based dashboards and database schema design.",
+        "tech": [
+            "PHP",
+            "SQL",
+            "Tailwind"
+        ]
+    },
+    {
+        "id": "cafe-web",
+        "title": "Cafe Website (AWS)",
+        "category": "WEB",
+        "status": "ACADEMIC",
+        "desc": "Full stack login/register system deployed on AWS with Load Balancer and Aurora DB.",
+        "tech": [
+            "AWS Aurora",
+            "Load Balancer"
+        ]
+    },
+    {
+        "id": "leadflow-pro",
+        "title": "LeadFlow Pro Dashboard",
+        "category": "WEB",
+        "status": "REBUILD",
+        "desc": "React + Tailwind admin UI for lead management with CSV upload flows and analytics.",
+        "tech": [
+            "React",
+            "Firebase",
+            "MongoDB"
+        ]
+    },
+    {
+        "id": "semico-ai",
+        "title": "Semiconductor Auto-AI",
+        "category": "META",
+        "status": "CONCEPT",
+        "desc": "Autonomous engineer logic for semiconductor physics optimization. Extension of Genesis-AI.",
+        "tech": [
+            "Graph Theory",
+            "Physics"
+        ]
+    },
+    {
+        "id": "portfolio-v1",
+        "title": "Personal E-Portfolio",
+        "category": "BRAND",
+        "status": "LIVE",
+        "desc": "The very system you are viewing. Advanced animations, sci-fi theme, and ecosystem showcase.",
+        "tech": [
+            "React",
+            "Vite",
+            "Three.js"
+        ]
+    },
+    {
+        "id": "social-brand",
+        "title": "Tech Branding (LinkedIn)",
+        "category": "BRAND",
+        "status": "ACTIVE",
+        "desc": "Gym + Tech crossover branding strategy. Reels, carousels, and personal positioning.",
+        "tech": [
+            "Content Strategy",
+            "Video"
+        ]
+    },
+    {
+        "id": "jelly-vis",
+        "title": "Jelly Waveform Visualizer",
+        "category": "MISC",
+        "status": "EXPERIMENTAL",
+        "desc": "Beat-reactive fluid physics visualizer. 'Albumen-style' motion graphics.",
+        "tech": [
+            "JS",
+            "Canvas/WebGL"
+        ]
+    },
+    {
+        "id": "voice-agent",
+        "title": "Voice Talking Agent",
+        "category": "MISC",
+        "status": "RESEARCH",
+        "desc": "Vapi-style voice agent research with script-driven responses and conversational pipelines.",
+        "tech": [
+            "Vapi",
+            "LLM"
+        ]
+    }
+]

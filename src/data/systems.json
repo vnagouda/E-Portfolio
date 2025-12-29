@@ -1,0 +1,333 @@
+[
+    {
+        "id": "aquafish",
+        "name": "Aquafish",
+        "tagline": "Edge AI Aquaculture Intelligence",
+        "status": "DEPLOYED",
+        "domain": "CV / IoT",
+        "problem": "Traditional aquaculture relies on manual sampling and intuitive feeding, leading to 30% feed wastage and delayed disease detection.",
+        "solution": "A distributed Edge AI system using Raspberry Pi 5 + YOLOv8 for real-time fish detection, biomass estimation, and FCR (Feed Conversion Ratio) optimization.",
+        "architecture": [
+            "Edge: Raspberry Pi 5 + USB Webcam (Field Node)",
+            "Vision: Custom YOLOv8 (Fish vs Non-Fish logic)",
+            "Streaming: MediaMTX (RTSP/HLS/WebRTC)",
+            "Cloud: AWS EC2 + Role-based Dashboard"
+        ],
+        "challenges": [
+            "Bubble & noise filtering in underwater footage.",
+            "Stream IP management for isolated farm data.",
+            "Cost-constrained hardware design for small farmers."
+        ],
+        "improvements": [
+            "Integrate 'Fish Detection Restart' background subtraction logic.",
+            "Automate harvest date prediction models."
+        ],
+        "significance": "Deployed field-tested system. Not just a model—a complete farm management pipeline from edge capture to admin analytics.",
+        "technologies": [
+            "Python",
+            "YOLOv8",
+            "Raspberry Pi",
+            "MediaMTX",
+            "AWS EC2",
+            "React"
+        ],
+        "repoUrl": "https://github.com/vnagouda/aquafish-core",
+        "liveUrl": "https://aquafish-demo.vercel.app",
+        "evidenceImages": [
+            "/assets/systems/aquafish_preview.png"
+        ],
+        "technicalMetrics": {
+            "Detection": "YOLOv8 Custom",
+            "Latency": "Real-time Edge",
+            "FCR Impact": "-18% Cost"
+        }
+    },
+    {
+        "id": "byteseal",
+        "name": "ByteSeal",
+        "tagline": "Zero-Knowledge Credential Vault",
+        "status": "ACTIVE",
+        "domain": "Security / Mobile",
+        "problem": "Cloud-based password managers lack verifiable local ownership. Users need a fortress that lives offline.",
+        "solution": "A production-grade Android vault (Kotlin + Jetpack Compose) using AES-GCM (CryptoJS) for strict local encryption and biometric authentication.",
+        "architecture": [
+            "Core: MVVM Architecture + StateFlow",
+            "Security: AES-GCM (CryptoJS) + Master Key Logic",
+            "Auth: Biometric (Face/Fingerprint) + BLE fallback",
+            "Integration: System-level Autofill Service"
+        ],
+        "challenges": [
+            "Implementing secure autofill context in Chrome.",
+            "Migrating from Vault MVP to production architecture.",
+            "Handling large file encryption with memory constraints."
+        ],
+        "improvements": [
+            "Steganographic backup integration.",
+            "FIDO2 Hardware Key support."
+        ],
+        "significance": "A security-first product philosophy. 'Evidence packs' and zero-knowledge architecture prove you own your data.",
+        "technologies": [
+            "Kotlin",
+            "Jetpack Compose",
+            "CryptoJS",
+            "AES-GCM",
+            "Coroutines"
+        ],
+        "repoUrl": "https://github.com/vnagouda/byteseal-mobile",
+        "liveUrl": null,
+        "evidenceImages": [
+            "/assets/systems/byteseal_preview.png"
+        ],
+        "technicalMetrics": {
+            "Encryption": "AES-GCM",
+            "Platform": "Android Native",
+            "Auth": "Biometric/BLE"
+        }
+    },
+    {
+        "id": "sayas-ocr",
+        "name": "Sayas OCR",
+        "tagline": "WhatsApp Automated KYC Pipeline",
+        "status": "DEPLOYED",
+        "domain": "ML / Automation",
+        "problem": "Manual Aadhaar/ID entry for cooperatives is slow, error-prone, and creates data bottlenecks.",
+        "solution": "A WhatsApp-native OCR pipeline that intercepts document photos, extracts structured data (Name, DOB, Address), and syncs to a MongoDB backend.",
+        "architecture": [
+            "Interface: Twilio WhatsApp Webhook",
+            "Processing: OpenCV (Preprocessing) + OCR Engine",
+            "Backend: Flask API + MongoDB",
+            "Storage: AWS S3 (Structured Image Vault)"
+        ],
+        "challenges": [
+            "Partial-state handling (missing front/back images).",
+            "Parsing varied address formats from OCR text.",
+            "Handling glare and blur in field-uploaded photos."
+        ],
+        "improvements": [
+            "Lead status transition logic (Pending -> InProgress).",
+            "Multi-language support for regional IDs."
+        ],
+        "significance": "Production-ready automation. Solves a real business problem (KYC latency) using the interface users already know (WhatsApp).",
+        "technologies": [
+            "Python",
+            "Flask",
+            "OpenCV",
+            "MongoDB",
+            "Twilio",
+            "AWS S3"
+        ],
+        "repoUrl": "https://github.com/vnagouda/sayas-ocr-engine",
+        "liveUrl": null,
+        "evidenceImages": [
+            "/assets/systems/sayas_ocr_preview.png"
+        ],
+        "technicalMetrics": {
+            "Throughput": "Instant Extract",
+            "Storage": "S3 Structured",
+            "Stack": "Flask/Mongo"
+        }
+    },
+    {
+        "id": "mediamtx-infra",
+        "name": "MediaMTX Infra",
+        "tagline": "Low-Latency Streaming Pipeline",
+        "status": "DEPLOYED",
+        "domain": "Infrastructure",
+        "problem": "Standard RTSP streams have high latency (5-10s), making real-time remote drone/camera control impossible.",
+        "solution": "A custom EC2-hosted MediaMTX server pipeline converting RTMP/RTSP to WebRTC for sub-500ms latency availability via public IP.",
+        "architecture": [
+            "Ingest: RTMP/RTSP from Edge Devices",
+            "Core: MediaMTX (Golang based server)",
+            "Output: HLS (Playback) + WebRTC (Real-time)",
+            "Hosting: AWS EC2 t2.micro"
+        ],
+        "challenges": [
+            "Configuring UDP hole punching for WebRTC.",
+            "Balancing quality vs latency on 4G networks."
+        ],
+        "improvements": [
+            "Adaptive bitrate streaming (ABR).",
+            "Multi-tenant auth for stream keys."
+        ],
+        "significance": "The backbone of the Aquafish real-time feed. Demonstrates cloud infrastructure and networking competence.",
+        "technologies": [
+            "MediaMTX",
+            "Docker",
+            "AWS EC2",
+            "WebRTC",
+            "FFmpeg"
+        ],
+        "repoUrl": "https://github.com/vnagouda/streaming-infra",
+        "liveUrl": null,
+        "evidenceImages": [
+            "/assets/systems/mediamtx_preview.png"
+        ],
+        "technicalMetrics": {
+            "Latency": "< 500ms",
+            "Protocol": "WebRTC/HLS",
+            "Uptime": "99.9%"
+        }
+    },
+    {
+        "id": "yolo-tool",
+        "name": "Pro Annotator",
+        "tagline": "Custom YOLO Dataset Tool",
+        "status": "ADVANCED PROTO",
+        "domain": "Tools / UX",
+        "problem": "Existing annotation tools were either expensive (Roboflow) or clunky (LabelImg) for rapid custom workflows.",
+        "solution": "A Python/Tkinter GUI built for speed: Zoom-to-cursor, auto-save, dynamic class management, and one-click data.yaml generation.",
+        "architecture": [
+            "UI: Python Tkinter (Custom Theming)",
+            "Logic: Canvas-based Bounding Box rendering",
+            "Output: YOLOv8 Standard Text Files",
+            "Feature: Auto-Dataset structure generation"
+        ],
+        "challenges": [
+            "Implementing smooth pan/zoom math on Canvas.",
+            "Handling large directories without UI freeze."
+        ],
+        "improvements": [
+            "Add 'Magic Wand' SAM integration.",
+            "Web-based port using React Canvas."
+        ],
+        "significance": "Developer Experience (DX) tool. Shows ability to build internal tools to accelerate ML workflows.",
+        "technologies": [
+            "Python",
+            "Tkinter",
+            "Pillow",
+            "YOLO Format"
+        ],
+        "repoUrl": "https://github.com/vnagouda/yolo-annotator",
+        "liveUrl": null,
+        "evidenceImages": [
+            "/assets/systems/yolo_tool_preview.png"
+        ],
+        "technicalMetrics": {
+            "Type": "Desktop GUI",
+            "Output": "YOLO TXT",
+            "Speed": "2x Faster"
+        }
+    },
+    {
+        "id": "health-coach",
+        "name": "AI Health Coach",
+        "tagline": "Gemini-Powered Flutter App",
+        "status": "ARCHITECTED",
+        "domain": "Mobile / GenAI",
+        "problem": "Generic health apps lack context-aware advice. Coaching requires parsing complex user history and preferences.",
+        "solution": "A Flutter (Material 3) app integrating Gemini API for personalized health responses, backed by Firebase Auth and Firestore.",
+        "architecture": [
+            "Frontend: Flutter (MVVM + Provider)",
+            "AI: Google Gemini API (Streamed Responses)",
+            "Backend: Firebase (Auth + Firestore)",
+            "UX: Material Design 3 Theming"
+        ],
+        "challenges": [
+            "Structuring prompts to prevent medical hallucinations.",
+            "Managing chat state and history persistence."
+        ],
+        "improvements": [
+            "Wearable data integration (Google Fit).",
+            "Voice input for logging meals."
+        ],
+        "significance": "Modern mobile development + LLM integration. A complete product architecture from verify to chat.",
+        "technologies": [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "Gemini API",
+            "Material 3"
+        ],
+        "repoUrl": "https://github.com/vnagouda/ai-health-coach",
+        "liveUrl": null,
+        "evidenceImages": [
+            "/assets/systems/health_coach_preview.png"
+        ],
+        "technicalMetrics": {
+            "Stack": "Flutter/Dart",
+            "Model": "Gemini 1.5",
+            "State": "MVVM"
+        }
+    },
+    {
+        "id": "crowd-flow",
+        "name": "Crowd Flow",
+        "tagline": "Queue & Crowd VAE Implementation",
+        "status": "EXPERIMENTAL",
+        "domain": "CV / Analytics",
+        "problem": "Retail and public spaces lack granular data on queue lengths and entry/exit flows.",
+        "solution": "A custom YOLOv8 + DeepSORT pipeline for tracking entities, estimating queue wait times, and analyzing dwell time in ROIs.",
+        "architecture": [
+            "Detection: YOLOv8 (Custom 'Animated Mice' trained)",
+            "Tracking: DeepSORT / Norfair",
+            "Logic: ROI-based counting & Time-spent estimation",
+            "Dashboard: Next.js + Tailwind"
+        ],
+        "challenges": [
+            "Occlusion in dense queues.",
+            "Maintaining ID consistency across frame drops."
+        ],
+        "improvements": [
+            "Azure IoT scaling for multi-camera streams.",
+            "Real-time anomaly detection."
+        ],
+        "significance": "Applied research into behavioral analytics. Moves beyond simple counting to 'time-spent' and 'flow' metrics.",
+        "technologies": [
+            "Python",
+            "YOLOv8",
+            "DeepSORT",
+            "Next.js",
+            "Tailwind"
+        ],
+        "repoUrl": "https://github.com/vnagouda/crowd-flow-cv",
+        "liveUrl": null,
+        "evidenceImages": [
+            "/assets/systems/crowd_flow_preview.png"
+        ],
+        "technicalMetrics": {
+            "Tracker": "DeepSORT",
+            "Metric": "Dwell Time",
+            "Target": "Queue Ops"
+        }
+    },
+    {
+        "id": "genesis",
+        "name": "Genesis-AI",
+        "tagline": "Self-Evolving Scientific Agent",
+        "status": "CONCEPTUAL",
+        "domain": "Meta / Research",
+        "problem": "Dependence on pre-trained black-box LLMs limits true scientific discovery and hypothesis generation.",
+        "solution": "A conceptual 'Artificial Scientist' framework designed for recursive self-modification and hypothesis generation without reliance on paid APIs.",
+        "architecture": [
+            "Core: Recursive Self-Modification Loop",
+            "Domain: Semiconductor Physics & Manufacturing",
+            "Philosophy: SDLC-first (Software Development Life Cycle)",
+            "Constraint: Offline-first, No Pre-trained Giants"
+        ],
+        "challenges": [
+            "Bootstrapping reasoning without massive pre-training.",
+            "Defining specific 'physics' constraints for the agent."
+        ],
+        "improvements": [
+            "Expand to 'Semiconductor Autonomous AI System'.",
+            "Implement basic hypothesis testing loops."
+        ],
+        "significance": "Use this to show *how* you think. It's not a tool, it's a blueprint for an autonomous engineer.",
+        "technologies": [
+            "Python",
+            "Graph Theory",
+            "First-Principles",
+            "Meta-Heuristics"
+        ],
+        "repoUrl": "https://github.com/vnagouda/genesis-reasoning",
+        "liveUrl": null,
+        "evidenceImages": [
+            "/assets/systems/genesis_preview.png"
+        ],
+        "technicalMetrics": {
+            "Type": "Autonomous",
+            "Dependency": "Zero-External",
+            "Goal": "Discovery"
+        }
+    }
+]

@@ -1,16 +1,29 @@
-/* CLEANED FOR LAYOUT BUGS */
-#root {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+/* ========================================
+   APP LAYOUT
+   ======================================== */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+.main-content {
+    flex: 1;
+    padding-top: var(--nav-height);
+    position: relative;
+    z-index: 1;
+    animation: pageFadeIn 0.5s ease-out;
 }
 
-.read-the-docs {
-  color: #888;
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
