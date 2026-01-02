@@ -201,6 +201,15 @@
     .console-nav__mobile {
         display: block;
     }
+
+    /* Fix Brand Overflow */
+    .brand-text {
+        font-size: 14px;
+    }
+
+    .brand-tag {
+        display: none;
+    }
 }
 
 /* RESOURCE NODE BUTTON STYLES */
