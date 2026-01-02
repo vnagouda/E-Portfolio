@@ -34,7 +34,7 @@
         "repoUrl": "https://github.com/vnagouda/aquafish-core",
         "liveUrl": "https://aquafish-demo.vercel.app",
         "evidenceImages": [
-            "/assets/systems/aquafish_preview.png"
+            "assets/systems/aquafish_preview.png"
         ],
         "technicalMetrics": {
             "Detection": "YOLOv8 Custom",
@@ -76,7 +76,7 @@
         "repoUrl": "https://github.com/vnagouda/byteseal-mobile",
         "liveUrl": null,
         "evidenceImages": [
-            "/assets/systems/byteseal_preview.png"
+            "assets/systems/byteseal_preview.png"
         ],
         "technicalMetrics": {
             "Encryption": "AES-GCM",
@@ -119,7 +119,7 @@
         "repoUrl": "https://github.com/vnagouda/sayas-ocr-engine",
         "liveUrl": null,
         "evidenceImages": [
-            "/assets/systems/sayas_ocr_preview.png"
+            "assets/systems/sayas_ocr_preview.png"
         ],
         "technicalMetrics": {
             "Throughput": "Instant Extract",
@@ -160,7 +160,7 @@
         "repoUrl": "https://github.com/vnagouda/streaming-infra",
         "liveUrl": null,
         "evidenceImages": [
-            "/assets/systems/mediamtx_preview.png"
+            "assets/systems/mediamtx_preview.png"
         ],
         "technicalMetrics": {
             "Latency": "< 500ms",
@@ -200,7 +200,7 @@
         "repoUrl": "https://github.com/vnagouda/yolo-annotator",
         "liveUrl": null,
         "evidenceImages": [
-            "/assets/systems/yolo_tool_preview.png"
+            "assets/systems/yolo_tool_preview.png"
         ],
         "technicalMetrics": {
             "Type": "Desktop GUI",
@@ -241,7 +241,7 @@
         "repoUrl": "https://github.com/vnagouda/ai-health-coach",
         "liveUrl": null,
         "evidenceImages": [
-            "/assets/systems/health_coach_preview.png"
+            "assets/systems/health_coach_preview.png"
         ],
         "technicalMetrics": {
             "Stack": "Flutter/Dart",
@@ -282,7 +282,7 @@
         "repoUrl": "https://github.com/vnagouda/crowd-flow-cv",
         "liveUrl": null,
         "evidenceImages": [
-            "/assets/systems/crowd_flow_preview.png"
+            "assets/systems/crowd_flow_preview.png"
         ],
         "technicalMetrics": {
             "Tracker": "DeepSORT",
@@ -322,7 +322,7 @@
         "repoUrl": "https://github.com/vnagouda/genesis-reasoning",
         "liveUrl": null,
         "evidenceImages": [
-            "/assets/systems/genesis_preview.png"
+            "assets/systems/genesis_preview.png"
         ],
         "technicalMetrics": {
             "Type": "Autonomous",

@@ -411,6 +411,10 @@
 }
 
 @media (max-width: 600px) {
+    .systems-view {
+        padding: var(--space-xl) var(--space-md);
+    }
+
     .glitch-title {
         font-size: var(--text-2xl);
     }

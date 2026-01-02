@@ -17,7 +17,9 @@
    ======================================== */
 
 .lab-hero {
-    min-height: calc(100vh - var(--nav-height));
+    min-height: 100vh;
+    /* Fallback */
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     padding: var(--space-3xl) 0;
@@ -636,11 +638,19 @@
 }
 
 @media (max-width: 600px) {
+    .lab-hero .container {
+        padding: 0 var(--space-md);
+    }
+
     .hero-title {
         font-size: 1.8rem;
     }
 
     .panel-stats {
         grid-template-columns: 1fr;
+    }
+
+    .lab-section {
+        padding: var(--space-xl) 0;
     }
 }
