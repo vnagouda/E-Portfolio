@@ -147,10 +147,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 10, 15, 0.98);
-    backdrop-filter: blur(15px);
+    /* Solid background for better visibility */
+    background: #0a0a0f;
     padding: var(--space-lg);
     transform: translateX(100%);
+    z-index: 2000;
     transition: transform var(--transition-base);
 }
 
